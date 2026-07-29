@@ -49,6 +49,7 @@
 
     /* Largura principal */
     --container-width: 1280px;
+    --hero-container-width: 1480px;
 
     /* Transições */
     --transition-fast: 180ms ease;

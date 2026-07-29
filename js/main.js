@@ -26,3 +26,18 @@ function animateStatistic(element) {
 statisticNumbers.forEach((number) => {
     animateStatistic(number);
 });
+
+
+const revealElements = document.querySelectorAll(".reveal");
+
+function showInitialElements() {
+    revealElements.forEach((element) => {
+        const delay = Number(element.dataset.delay) || 0;
+
+        setTimeout(() => {
+            element.classList.add("is-visible");
+        }, delay);
+    });
+}
+
+window.addEventListener("load", showInitialElements);
