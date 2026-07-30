@@ -328,3 +328,28 @@
 .footer__copyright {
     text-align: center;
 }
+
+.contact-form__feedback {
+    min-height: 24px;
+    margin-top: 16px;
+
+    color: var(--color-text-muted);
+
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contact-form__feedback--success {
+    color: var(--color-success);
+}
+
+.contact-form__feedback--error {
+    color: #f87171;
+}
+
+.contact-form__button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+}

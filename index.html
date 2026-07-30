@@ -244,17 +244,12 @@
 
                         <div class="featured-projects__stats">
                             <div class="featured-stat">
-                                <strong class="featured-stat__number" data-target="35">0</strong>
-                                <span>Commits</span>
-                            </div>
-
-                            <div class="featured-stat">
-                                <strong class="featured-stat__number" data-target="6">0</strong>
+                                <strong class="featured-stat__number" data-target="4">0</strong>
                                 <span>Projetos</span>
                             </div>
 
                             <div class="featured-stat">
-                                <strong class="featured-stat__number" data-target="2">0</strong>
+                                <strong class="featured-stat__number" data-target="1">0</strong>
                                 <span>Anos estudando</span>
                             </div>
 
@@ -798,10 +793,10 @@
 
                 <div class="contact__content reveal">
                     <div class="contact__links">
-                        <a href="mailto:SEU_EMAIL_AQUI" class="contact-link">
+                        <a href="mailto:dkdev.solucoes@gmail.com?subject=Novo%20projeto%20-%20Portfólio%20DKDev&body=Olá,%20Kainã!%20Encontrei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." class="contact-link">
                             <span class="contact-link__label">E-mail</span>
 
-                            <strong>SEU_EMAIL_AQUI</strong>
+                            <strong>dkdev.solucoes@gmail.com</strong>
 
                             <span class="contact-link__arrow">↗</span>
                         </a>
@@ -815,7 +810,7 @@
                             <span class="contact-link__arrow">↗</span>
                         </a>
 
-                        <a href="SEU_LINK_LINKEDIN" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/kaina-ferreira-dev/" class="contact-link" target="_blank" rel="noopener noreferrer">
                             <span class="contact-link__label">LinkedIn</span>
 
                             <strong>Kainã Ferreira</strong>
@@ -823,33 +818,32 @@
                             <span class="contact-link__arrow">↗</span>
                         </a>
 
-                        <a href="SEU_LINK_WHATSAPP" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/5548991079129?text=Olá%2C%20Kainã!%20Encontrei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." class="contact-link" target="_blank" rel="noopener noreferrer">
                             <span class="contact-link__label">WhatsApp</span>
 
-                            <strong>Falar agora</strong>
+                            <strong>Falar agora -> (48) 99107-9129</strong>
 
                             <span class="contact-link__arrow">↗</span>
                         </a>
                     </div>
 
-                    <form class="contact-form">
+                    <form class="contact-form" id="contact-form">
                         <div class="contact-form__group">
                             <label for="name">Nome</label>
 
-                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                            <input type="text" id="name" name="user_name" placeholder="Seu nome" required>
                         </div>
 
                         <div class="contact-form__group">
                             <label for="email">E-mail</label>
 
-                            <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+                            <input type="email" id="email" name="user_email" placeholder="voce@email.com" required>
                         </div>
 
                         <div class="contact-form__group">
                             <label for="subject">Assunto</label>
 
-                            <input type="text" id="subject" name="subject" placeholder="Sobre o que vamos conversar?"
-                                required>
+                            <input type="text" id="subject" name="subject" placeholder="Sobre o que vamos conversar?" required>
                         </div>
 
                         <div class="contact-form__group">
@@ -863,6 +857,7 @@
                             Enviar mensagem
                             <span aria-hidden="true">↗</span>
                         </button>
+                        <p class="contact-form__feedback" id="contact-feedback" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -890,8 +885,10 @@
         </footer>
     </main>
 
-    <script src="./js/projects.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="./js/projects.js"></script>
+<script src="./js/main.js"></script>
 </body>
 
 </html>
