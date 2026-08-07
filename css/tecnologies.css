@@ -7,11 +7,9 @@
     border-top: 1px solid var(--color-border);
 
     background:
-        radial-gradient(
-            circle at 85% 25%,
+        radial-gradient(circle at 85% 25%,
             rgba(34, 211, 238, 0.06),
-            transparent 28%
-        ),
+            transparent 28%),
         var(--color-background-soft);
 }
 
@@ -108,23 +106,22 @@
     justify-content: center;
     flex-shrink: 0;
 
-    width: 42px;
+    width: 52px;
     height: 42px;
 
     border: 1px solid rgba(139, 92, 246, 0.28);
     border-radius: 12px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(139, 92, 246, 0.18),
-            rgba(37, 99, 235, 0.06)
-        );
+            rgba(37, 99, 235, 0.06));
 
     color: var(--color-primary-light);
 
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 900;
+    letter-spacing: 0.02em;
 }
 
 .technology-item div {
