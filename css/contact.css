@@ -17,7 +17,7 @@
             rgba(34, 211, 238, 0.05),
             transparent 28%
         ),
-        var(--color-background-soft);
+        rgba(10, 10, 18, 0.58);
 }
 
 .contact__intro {
@@ -273,7 +273,7 @@
 
     border-top: 1px solid var(--color-border);
 
-    background: var(--color-background);
+    background: rgba(5, 5, 9, 0.58);
 }
 
 .footer__container {

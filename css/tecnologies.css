@@ -10,7 +10,7 @@
         radial-gradient(circle at 85% 25%,
             rgba(34, 211, 238, 0.06),
             transparent 28%),
-        var(--color-background-soft);
+        rgba(10, 10, 18, 0.58);
 }
 
 .technologies__groups {
