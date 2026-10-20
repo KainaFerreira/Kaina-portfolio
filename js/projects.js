@@ -15,10 +15,11 @@ const projects = [
 
     {
         title: "BarberControl Finance",
+        coverTitle: "BarberControl Finance",
         category: "Sistema de gestão",
         description:
             "Sistema para gestão de barbearias, clientes, fidelidade e controle financeiro.",
-        image: "./assets/images/projects/barbercontrol.png",
+        image: "./assets/images/projects/barbercontrol-cover.jpg",
         technologies: ["React", "JavaScript", "CSS", "LocalStorage"],
         deploy: "https://barbercontrolfinance.netlify.app/",
         repository: "",
@@ -28,15 +29,37 @@ const projects = [
 
     {
         title: "AlmoSys",
+        coverTitle: "AlmoSys",
         category: "Sistema empresarial",
         description:
             "Sistema em desenvolvimento para gestão e análise de processos de almoxarifado.",
-        image: "./assets/images/projects/almosys.png",
+        image: "./assets/images/projects/almosys-cover.jpg",
         technologies: ["React", "Tailwind", "Firebase", "Vite"],
         deploy: "",
         repository: "",
         status: "Em desenvolvimento",
         featured: false,
+    },
+
+    {
+        title: "Refri do Dev",
+        coverTitle: "Refri do Dev",
+        category: "Landing page interativa",
+        description:
+            "Página interativa de refrigerantes com navegação animada entre os sabores morango, abacate e laranja.",
+        previewThemeClass: "project-card__image-wrapper--refri",
+        flavors: [
+            { name: "Morango", image: "./assets/images/projects/refri-morango.png" },
+            { name: "Abacate", image: "./assets/images/projects/refri-abacate.png" },
+            { name: "Laranja", image: "./assets/images/projects/refri-laranja.png" },
+        ],
+        technologies: ["HTML", "CSS", "JavaScript"],
+        deploy: "",
+        repository:
+            "https://github.com/KainaFerreira/PROJETO-AULA-REFRI-DO-DEV",
+        status: "Não hospedado",
+        statusClass: "project-card__status--repository",
+        featured: true,
     },
 ];
 
@@ -73,15 +96,28 @@ function createProjectLink(url, label, modifier) {
 function createProjectCard(project) {
     return `
         <article class="project-card reveal">
-            <div class="project-card__image-wrapper">
-                <img
-                    src="${project.image}"
-                    alt="Prévia do projeto ${project.title}"
-                    class="project-card__image"
-                    loading="lazy"
-                >
+            <div class="project-card__image-wrapper ${project.previewThemeClass || ""}">
+                ${project.flavors
+                    ? `<div class="project-card__flavors">
+                        ${project.flavors.map((flavor) => `
+                            <div class="project-card__flavor">
+                                <img src="${flavor.image}" alt="Lata sabor ${flavor.name}" loading="lazy">
+                                <span>${flavor.name}</span>
+                            </div>
+                        `).join("")}
+                    </div>`
+                    : `<img
+                        src="${project.image}"
+                        alt="Prévia do projeto ${project.title}"
+                        class="project-card__image"
+                        loading="lazy"
+                    >`}
 
-                <span class="project-card__status">
+                ${project.coverTitle
+                    ? `<span class="project-card__cover-title">${project.coverTitle}</span>`
+                    : ""}
+
+                <span class="project-card__status ${project.statusClass || ""}">
                     ${project.status}
                 </span>
             </div>

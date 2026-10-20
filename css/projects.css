@@ -61,6 +61,56 @@
     overflow: hidden;
 }
 
+.project-card__image-wrapper--refri {
+    background:
+        radial-gradient(ellipse at 17% 70%, rgba(234, 61, 65, 0.3), transparent 35%),
+        radial-gradient(ellipse at 50% 70%, rgba(45, 86, 67, 0.38), transparent 38%),
+        radial-gradient(ellipse at 83% 70%, rgba(231, 160, 67, 0.32), transparent 36%),
+        linear-gradient(135deg, #190e18, #11131c 56%, #1c1415);
+}
+
+.project-card__flavors {
+    position: absolute;
+    inset: 18px 7% 12px;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: clamp(8px, 3vw, 32px);
+}
+
+.project-card__flavor {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+    max-width: 170px;
+}
+
+.project-card__flavor img {
+    width: 100%;
+    min-height: 0;
+    flex: 1 1 auto;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.38));
+    transition: transform 450ms ease;
+}
+
+.project-card:hover .project-card__flavor img {
+    transform: translateY(-5px);
+}
+
+.project-card__flavor span {
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 .project-card__image {
     width: 100%;
     height: 100%;
@@ -68,6 +118,37 @@
     object-fit: cover;
 
     transition: transform 600ms ease;
+}
+
+.project-card__cover-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    width: max-content;
+    max-width: calc(100% - 40px);
+    padding: 13px 20px;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 12px;
+
+    background: rgba(8, 10, 17, 0.46);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    color: #fff;
+    font-size: clamp(18px, 2.4vw, 30px);
+    font-weight: 850;
+    letter-spacing: 0.035em;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.72);
+    pointer-events: none;
 }
 
 .project-card:hover .project-card__image {
@@ -93,6 +174,11 @@
     letter-spacing: 0.06em;
 
     backdrop-filter: blur(12px);
+}
+
+.project-card__status--repository {
+    border-color: rgba(96, 165, 250, 0.3);
+    color: #93c5fd;
 }
 
 .project-card__body {

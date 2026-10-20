@@ -15,6 +15,10 @@
         width: min(100%, 370px);
     }
 
+    .hero__portrait {
+        width: clamp(190px, 17vw, 250px);
+    }
+
     .hero__title {
         font-size: clamp(58px, 6.5vw, 96px);
     }
@@ -49,6 +53,18 @@
     .hero__visual {
         width: 100%;
         min-height: 480px;
+        justify-content: center;
+        gap: clamp(18px, 4vw, 48px);
+    }
+
+    .hero__portrait {
+        width: clamp(190px, 25vw, 280px);
+    }
+
+    .featured-projects {
+        width: min(100%, 390px);
+        max-width: 390px;
+        margin-left: 0;
     }
 
     .hero-navigation {
@@ -116,10 +132,8 @@
     }
 
     .featured-projects {
-        justify-self: center;
-
-        width: 100%;
-        max-width: 680px;
+        width: min(100%, 390px);
+        max-width: 390px;
     }
 
     .hero-navigation {
@@ -206,6 +220,24 @@
 
     .hero__container {
         gap: 38px;
+    }
+
+    .hero__visual {
+        min-height: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        padding-top: 8px;
+    }
+
+    .hero__portrait {
+        width: min(56vw, 230px);
+        margin: 0;
+    }
+
+    .featured-projects {
+        width: min(100%, 520px);
+        max-width: 520px;
     }
 
     .hero__title {
