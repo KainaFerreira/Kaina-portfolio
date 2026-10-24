@@ -28,13 +28,13 @@ const projects = [
     },
 
     {
-        title: "AlmoSys",
-        coverTitle: "AlmoSys",
-        category: "Sistema empresarial",
+        title: "App de Termo de Entrega",
+        coverTitle: "App de Termo de Entrega",
+        category: "Aplicação web",
         description:
-            "Sistema em desenvolvimento para gestão e análise de processos de almoxarifado.",
-        image: "./assets/images/projects/almosys-cover.jpg",
-        technologies: ["React", "Tailwind", "Firebase", "Vite"],
+            "Aplicativo privado de termo de entrega, atualmente em desenvolvimento.",
+        image: "./assets/images/projects/termo-entrega-cover.png",
+        technologies: [],
         deploy: "",
         repository: "",
         status: "Em desenvolvimento",
@@ -57,6 +57,21 @@ const projects = [
         deploy: "",
         repository:
             "https://github.com/KainaFerreira/PROJETO-AULA-REFRI-DO-DEV",
+        status: "Não hospedado",
+        statusClass: "project-card__status--repository",
+        featured: true,
+    },
+
+    {
+        title: "ClimaDev",
+        coverTitle: "ClimaDev",
+        category: "Aplicação web",
+        description:
+            "Aplicativo de previsão do tempo com busca por cidade, consulta por voz e sugestões personalizadas.",
+        image: "./assets/images/projects/app-temperatura-cover.png",
+        technologies: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
+        deploy: "https://app-temperatura-dkdev.netlify.app/",
+        repository: "https://github.com/KainaFerreira/App-temperatura-DKDev",
         status: "Não hospedado",
         statusClass: "project-card__status--repository",
         featured: true,
